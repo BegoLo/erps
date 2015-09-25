@@ -39,13 +39,12 @@ public class Bd {
 	public void addCostumer(Customer customer) throws SQLException{
 		if (customer.getName().length()<=40){
 			String insertSql = "insert into customer values("+customer.getId()+", '"+customer.getName()+"')";
-			
 			statement.executeUpdate(insertSql);
 		}
 	}
 	
-	public void modifyCostumer(int id, String name) throws SQLException{
-		String updateSql = "update customer set name='"+name+"' where id="+id+"";
+	public void modifyCostumer(Customer customer) throws SQLException{
+		String updateSql = "update customer set name='"+customer.getName()+"' where id="+customer.getId()+"";
 		statement.executeUpdate(updateSql);
 	}
 	

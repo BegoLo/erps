@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 /**
- * Hello world!
+ * @author Bego Lopez
  *
  */
 public class Main 
@@ -63,8 +63,8 @@ public class Main
 		case 3:
 			System.out.println("+++MODIFY A COSTUMER+++");
 			id = insertId(reader);
-			name = insertName(reader);
-			bd.modifyCostumer(id, name);
+			Customer customerModify = new Customer(id,name);
+			bd.modifyCostumer(customerModify);
 			break;
 		case 4:
 			System.out.println("+++DELETE A COSTUMER+++");
